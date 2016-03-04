@@ -1,7 +1,13 @@
 # RubyNotes
 A collection of notes, tips and tricks that I want to remember when working with Ruby
 
-Ruby devs seem to like being called Rubyists. ¯\_(ツ)_/¯
+Ruby devs seem to like being called Rubyists. ¯\\_(ツ)_/¯
+
+Ruby has a special two-character symbol that is used all over the shop. It's called a rocket and it looks like this
+
+```Ruby
+=>
+```
 
 ##REPL (Read, Evaluate, Print, Loop)
 The Ruby REPL is called IRB. It is bundled with every Mac.
@@ -36,9 +42,9 @@ You should favour the non-negative syntax where possible. I presume because the 
 #####length
 Will give you the total number of characters in the string.
 
-`greeting.length` => 13
+`greeting.length => 13`
 
-`puts "\u{1F600}".length` => 1
+`puts "\u{1F600}".length => 1`
 
 #####split
 Split divides the string into separate elements delimited by space (by default). This is very similar to `NSString.componentsSeparatedByCharactersInSet`. 
@@ -171,8 +177,20 @@ Returns the first item in the array
 ######last
 Returns the last item in the array
 
+####Hashes
+A hash is what we would call a Dictionary in Swift or Objective-C - an unordered collection of key/value pairs.
 
+```Ruby
+event = {"id" => 1, "artist" => "Metronomy", "venue" => "The Alibi, Dalston, London"}; event['artist']
+=> "Metronomy"
+```
 
+This feels like it should error but it doesn't
+
+```Ruby
+event = {"id" => 1, "artist" => "Metronomy", "venue" => "The Alibi, Dalston, London", "artist" => "Blur"}; event['artist']
+=> "Blur"
+```
 
 ####Credits
 A great deal of the information for this came from [Ruby in 100 Minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html). I cannot recommend it enough as a gentle introduction.
