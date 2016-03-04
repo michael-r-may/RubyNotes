@@ -222,7 +222,47 @@ Note how we now have different key/value pairs for "artist" and :artist.
  
 Symbols are globally unique and immutable. Their value is basically irrelevant - it's their uniqueness that is key.
 
+####If
+If statements should look relatively familar, especially if you've done any shell scripting
 
+```Ruby
+  def magicNumbers(number)
+    if number == 3
+      puts 'The magic number'
+    elsif number == 12
+      puts 'The dirty dozen'
+    elsif number == 13
+      puts 'A bakers dozen'
+    elsif number == 42
+      puts 'The answer to life, the universe, and everything'
+    else
+      puts 'There is no magic here'
+    end
+  end
+```
+
+When your method only returns a boolean, the convention is to use a question mark suffix
+
+```Ruby
+    def isMagical?(number)
+    if number == 3
+      return true
+    elsif number == 12
+      return true
+    elsif number == 13
+      return true
+    elsif number == 42
+      return true
+    end
+
+    false
+  end
+```
+
+####Binary Operators
+Ruby has all of the common binary operators you would expect
+
+``==, =, <, >, <=, >=, &&, ||``
 
 ####Credits
 A great deal of the information for this came from [Ruby in 100 Minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html). I cannot recommend it enough as a gentle introduction.
