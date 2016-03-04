@@ -1,12 +1,12 @@
 # RubyNotes
 A collection of notes, tips and tricks that I want to remember when working with Ruby
 
-Ruby devs seem to like being called Rubyists. \_(ツ)_/¯
+Ruby devs seem to like being called Rubyists. ¯\_(ツ)_/¯
 
 ##REPL (Read, Evaluate, Print, Loop)
 The Ruby REPL is called IRB. It is bundled with every Mac.
 
-##Naming
+##Variable Naming
 ###Imposed by Ruby
 
 * Always start with a lowercase letter and have no spaces
@@ -39,4 +39,14 @@ Will give you the total number of characters in the string.
 Split divides the string into separate elements delimited by space (by default). This is very similar to `NSString.componentsSeparatedByCharactersInSet`. 
 `greeting.split` => ["Hello", "World"]
 `greeting.split("l")` => ["He", "", "o Wor", "d"]
-
+*sub and gsub*
+AKA substitute and globally substitute. This is very similar to `NSString.stringByReplacingOccurrencesOfString:withString:` where sub does only the first occurance and gsub does all occurances.
+`greeting.sub("l","L")` => "HeLlo World"
+`greeting.gsub("l","L")` => "HeLLo WorLd"
+*concatenation*
+Join strings with +
+`greeting + " of Warcraft"` => "Hello World of Warcraft"
+Interpolate with #{var}
+`name="Michael"; greeting = "Hi #{name}"` => "Hi Michael"
+Evaluate and interpolation
+`name="The answer to life, the universe, and everything is #{14*3}"` => "The answer to life, the universe, and everything is 42"
