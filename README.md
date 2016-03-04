@@ -140,6 +140,40 @@ Arrays are indexed from 0 and accessed/created using the typical square bracket 
 => "Hello"
 ```
 
+#####Array Methods
+Arrays have all the usual suspects.
+
+```Ruby
+[].methods
+=> [:inspect, :to_s, :to_a, :to_ary, :frozen?, :==, :eql?...
+```
+
+Of common interest are the likes of 
+
+######sort
+Sorts strings and numbers in the way you might expect. 
+
+######each
+Iterates through each element. Like `for..in` or `for each`.
+
+######join
+Concatenates arrays together.
+
+######index
+Returns the index of an item in the array.
+
+######include?
+Checks if an item is present in the array.
+
+######first
+Returns the first item in the array
+
+######last
+Returns the last item in the array
+
+
+
+
 ####Credits
 A great deal of the information for this came from [Ruby in 100 Minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html). I cannot recommend it enough as a gentle introduction.
 
