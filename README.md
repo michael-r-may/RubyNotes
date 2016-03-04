@@ -106,7 +106,7 @@ But you can put multiple lines in the brackets too, so which should you use. It 
 
 `{}` also has a higher precedence order which can [sometimes make a difference](http://stackoverflow.com/a/26218840)
 
-Note that some unexpected (to me) methods take an optional block. For example:
+Note that some unexpected (to me) methods take an optional block. For example, gsub can take a block instead of second argument. 
 
 ```Ruby
 "Hello World".gsub("l") { puts "there goes an l" }
@@ -114,6 +114,30 @@ there goes an l
 there goes an l
 there goes an l
 => "Heo Word"
+```
+
+#####Block Parameters
+The example above is somewhat abusing the gsub block syntax really since it is just using it to iterate through the string and find l rather than any useful substituting (although substituting for nothing may be just what we want).
+
+```Ruby
+"hello harry".gsub("h") {|letter| letter.upcase }
+=> "Hello Harry"
+```
+
+####Return
+Return is implicit in Ruby. So the above block returns the uppercased letter value which becomes the value to subsitute into the string. 
+
+####Arrays
+Arrays are indexed from 0 and accessed/created using the typical square bracket syntax.
+
+```Ruby
+["Hello", "Harry"]
+=> ["Hello", "Harry"]
+```
+
+```Ruby
+["Hello", "Harry"][0]
+=> "Hello"
 ```
 
 ####Credits
