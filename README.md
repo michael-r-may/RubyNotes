@@ -178,7 +178,7 @@ Returns the first item in the array
 Returns the last item in the array
 
 ####Hashes
-A hash is what we would call a Dictionary in Swift or Objective-C - an unordered collection of key/value pairs.
+A hash is what we would call a Dictionary in Foundation Swift or Objective-C - a mutable unordered collection of key/value pairs.
 
 ```Ruby
 event = {"id" => 1, "artist" => "Metronomy", "venue" => "The Alibi, Dalston, London"}; event['artist']
@@ -190,7 +190,39 @@ This feels like it should error but it doesn't
 ```Ruby
 event = {"id" => 1, "artist" => "Metronomy", "venue" => "The Alibi, Dalston, London", "artist" => "Blur"}; event['artist']
 => "Blur"
+event
+=> {"id"=>1, "artist"=>"Blur", "venue"=>"The Alibi, Dalston, London"}
 ```
+
+#####Hash Methods
+######keys
+Like allKeys in Foundation this returns all the keys in the hash.
+
+```Ruby
+event.keys
+=> ["id", "artist", "venue"]
+```
+
+######values
+Like allValues in Foundation this returns all the values in the hash.
+
+####Symbols
+It's common to use symbols as the keys for hashes. You can recognise a symbol because it is prefixed with a colon.
+
+```Ruby
+:artist
+=> :artist
+event[:artist]="MIA"
+=> "MIA"
+event
+=> {"id"=>1, "artist"=>"Blur", "venue"=>"The Alibi, Dalston, London", :artist=>"MIA"}
+```
+
+Note how we now have different key/value pairs for "artist" and :artist.
+ 
+Symbols are globally unique and immutable. Their value is basically irrelevant - it's their uniqueness that is key.
+
+
 
 ####Credits
 A great deal of the information for this came from [Ruby in 100 Minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html). I cannot recommend it enough as a gentle introduction.
