@@ -66,3 +66,56 @@ Interpolate with #{var}
 Evaluate and interpolation
 
 `name="The answer to life, the universe, and everything is #{14*3}"` => "The answer to life, the universe, and everything is 42"
+
+####Numbers
+Ruby supports integers and floats, as you might expect. They are complex types and so can have methods called on them, as well the usual infix operator style application.
+
+`5+2 => 7`
+
+`5+2.0 => 7.0`
+
+`5.methods => [:to_s, :inspect, :-@, :+, :-, :*, :/, :div, :%, :modulo,...`
+
+Ruby will implicitly cast for you, including integers to floats. 
+
+####Loops
+For a loop of N iterations
+
+```Ruby
+5.times do
+  puts "Hello, World!"
+end
+```
+
+####Blocks
+Ruby has blocks, just like Swift and Objective-C. They are either wrapped in do/end as we saw above
+
+```Ruby
+5.times do
+  puts "do/end block :allthethings"
+end
+```
+
+For single line blocks the bracket syntax is preferred
+
+```Ruby
+5.times { puts "do/end block :allthethings" }
+```
+
+But you can put multiple lines in the brackets too, so which should you use. It seems for small blocks then { } are peferred but for larger ones do/end is preferred.
+
+`{}` also has a higher precedence order which can [sometimes make a difference](http://stackoverflow.com/a/26218840)
+
+Note that some unexpected (to me) methods take an optional block. For example:
+
+```Ruby
+"Hello World".gsub("l") { puts "there goes an l" }
+there goes an l
+there goes an l
+there goes an l
+=> "Heo Word"
+```
+
+####Credits
+A great deal of the information for this came from [Ruby in 100 Minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html). I cannot recommend it enough as a gentle introduction.
+
