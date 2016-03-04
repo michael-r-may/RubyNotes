@@ -264,6 +264,21 @@ Ruby has all of the common binary operators you would expect
 
 ``==, =, <, >, <=, >=, &&, ||``
 
+####Nil
+Much like in Objective-C and Swift, Ruby has the concept of nil.
+
+You can get it when indexing out of an array bounds, for example.
+
+```Ruby
+ar[1]
+=> nil
+```
+
+You can also check if an object is nil with the `.nil` method.
+
+####Classes
+
+
 ####Credits
 A great deal of the information for this came from [Ruby in 100 Minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html). I cannot recommend it enough as a gentle introduction.
 
