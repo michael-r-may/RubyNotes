@@ -93,6 +93,16 @@ For a loop of N iterations
 end
 ```
 
+####Constants
+> A Ruby constant is like a variable, except that its value is _supposed_ to remain constant for the duration of the program. The Ruby interpreter _does not actually enforce the constancy of constants_, but it does issue a warning if a program changes the value of a constant.
+Source: [rubylearning.com](http://rubylearning.com/satishtalim/ruby_constants.html)
+
+```Ruby
+A_CONST = 10
+```
+
+They should be in all upper and snake case (again, by convention only).
+
 ####Blocks
 Ruby has blocks, just like Swift and Objective-C. They are either wrapped in do/end as we saw above
 
