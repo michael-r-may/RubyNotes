@@ -292,3 +292,10 @@ You can also check if an object is nil with the `.nil` method.
 ####Credits
 A great deal of the information for this came from [Ruby in 100 Minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html). I cannot recommend it enough as a gentle introduction.
 
+####Further Resources
+[Try Ruby](http://tryruby.org/levels/1/challenges/0) for learning the basics of Ruby's syntax
+[Getting Started With Ruby](http://guides.rubyonrails.org/getting_started.html) documentation, a really nice intro to building a simple Rails app)
+[Ruby Gems](http://guides.rubygems.org/) the Ruby package management system
+[Bundler](http://bundler.io/) is a tool to manage Gems
+[Sinatra](http://www.sinatrarb.com/) is a framework for creating simple services
+[Why's Poignant Guide To Ruby](http://www.rubyinside.com/media/poignant-guide.pdf) is a quirky introduction to Ruby
